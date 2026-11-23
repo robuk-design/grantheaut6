@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<meta content="#ffffff" name="theme-color"/>
+<meta content="light" name="color-scheme"/>
+<meta content="Instructions for opening the GTA VI link in your browser from TikTok." data-i18n-content="description" name="description"/>
+<meta content="GTA VI | Open in Browser" data-i18n-content="title" property="og:title"/>
+<meta content="Open the link in your browser to visit GTA VI." data-i18n-content="description" property="og:description"/>
+<title data-i18n="title">Open in Browser | GTA VI</title>
+<style>
+:root{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:#16181c;background:#fff;font-synthesis:none}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:#fff}
+body{-webkit-font-smoothing:antialiased}
+button,a{-webkit-tap-highlight-color:transparent}
+.page{max-width:475px;margin:0 auto;padding:0 14px 28px}
+.info{position:relative;min-height:46px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #eff0f2}
+.secure{display:flex;gap:6px;align-items:center;font-size:12px;font-weight:700;color:#35393e}
+.secure svg{width:15px;height:15px;flex:none}
+.top-hint{display:flex;align-items:center;gap:4px;margin-right:1px;pointer-events:none}
+.top-hint span{display:block;background:#202226;color:#fff;font-size:10px;font-weight:850;letter-spacing:.03em;border-radius:20px;padding:7px 11px;box-shadow:0 2px 7px #0002;animation:pulse 2s ease-in-out infinite}
+.top-hint svg{width:30px;height:33px;overflow:visible;transform:translateY(-5px)}
+.hero{text-align:center;padding:21px 3px 17px}
+.logo{position:relative;width:182px;height:112px;margin:0 auto 13px;padding:12px 11px;background:#202125;border-radius:11px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px #00000015;overflow:hidden}
+.logo-fallback{display:block;width:100%;height:100%;flex:none}
+.logo img{position:absolute;inset:0;display:block;width:100%;height:100%;padding:12px;object-fit:contain;opacity:0;transition:opacity .16s ease}
+.logo img.is-loaded{opacity:1}
+.logo.logo-ready .logo-fallback{visibility:hidden}
+h1{font-size:21px;line-height:1.2;letter-spacing:-.045em;font-weight:900;margin:0}
+.subtitle{font-size:12px;line-height:1.35;color:#888e97;margin:8px 0 0}
+.guide{position:relative;border:1px solid #e7e9ec;border-radius:14px;overflow:hidden;box-shadow:0 3px 12px #18202c0c;background:#fff;isolation:isolate}
+.guide-header{height:36px;padding:0 11px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #e7e9ec;background:#fff;position:relative;z-index:1}
+.guide-label{display:inline-flex;gap:5px;align-items:center;color:#fff;background:#303337;font-size:9px;font-weight:900;border-radius:30px;padding:6px 9px;letter-spacing:.04em}
+.guide-label:before{content:"";display:block;width:6px;height:6px;border-radius:50%;background:#36db7a}
+.guide-dots{font-size:21px;line-height:1;letter-spacing:1px;font-weight:800;min-width:30px;text-align:center;color:#141518;white-space:nowrap}
+.guide-stage{height:274px;position:relative;background:#fff;overflow:hidden}
+.scrim{position:absolute;inset:0;background:#777;opacity:1;transition:opacity .34s ease}
+.menu{position:absolute;bottom:0;left:0;right:0;border-radius:14px 14px 0 0;background:#fff;box-shadow:0 -5px 20px #0002;transform:translateY(0);opacity:1;transition:opacity .34s ease,transform .34s ease}
+.menu-item{min-height:47px;display:flex;align-items:center;gap:13px;padding:10px 15px;border-bottom:1px solid #edeef0;color:#23252a;font-size:14px;background:#fff}
+.menu-item:first-child{border-radius:14px 14px 0 0}
+.menu-item:last-child{border-bottom:0}
+.menu-item svg{width:17px;height:17px;stroke:#1f2328;stroke-width:1.9;fill:none;flex:none;stroke-linecap:round;stroke-linejoin:round}
+.menu-item.target{font-weight:800;background:#fafdff}
+.guide:not(.menu-open) .scrim{opacity:0}
+.guide:not(.menu-open) .menu{opacity:0;transform:translateY(105%)}
+/* Target-attached arrows: no animated motion between unrelated positions. */
+/* Both arrows are ANCHORED to their targets. No viewport-based position calculations. */
+.dots-anchor{position:relative;display:grid;place-items:center;width:34px;height:28px;flex:none}
+.guide-dots{position:relative;z-index:2}
+.menu-item.target{position:relative}
+.menu-item svg.target-arrow{width:96px;height:96px;stroke:none;flex:none}
+.target-arrow{position:absolute;z-index:5;width:96px;height:96px;pointer-events:none;overflow:visible;filter:drop-shadow(1px 2px 1px #0007);transition:opacity .12s ease}
+.target-arrow path{fill:#ff354a;stroke:#202228;stroke-width:3.4;stroke-linejoin:round}
+/* SVG tip=(101,8) of 108; point immediately below the dots so they remain visible. */
+.arrow-dots{left:calc(50% - 89.78px);top:calc(50% + 3.89px);opacity:0}
+/* Point just above the translated option; label-relative positioning prevents text overlap. */
+.arrow-menu{left:calc(50% - 6.22px);top:-97px;opacity:1}
+.guide:not(.menu-open) .arrow-dots{opacity:1}
+.guide:not(.menu-open) .arrow-menu{opacity:0}
+.guide.menu-open .arrow-dots{opacity:0}
+.guide.menu-open .arrow-menu{opacity:1}
+.step-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:12px 0 10px}
+.step{display:flex;align-items:center;gap:8px;border:1px solid #ebeef2;border-radius:11px;padding:10px 8px;min-height:52px;box-shadow:0 1px 5px #00000006}
+.step-count{height:23px;width:23px;border-radius:50%;background:#1684f5;color:#fff;font-weight:850;font-size:12px;display:grid;place-items:center;flex:none}
+.step-text b{font-size:11px;line-height:1.1;display:block}
+.step-text small{display:block;font-size:9px;color:#8c919a;margin-top:3px;line-height:1.15}
+.notice{display:flex;align-items:center;justify-content:center;gap:8px;padding:11px 9px;border:1px solid #d9ebfb;border-radius:10px;color:#4685ad;background:#ecf7ff;font-size:11px;font-weight:800}
+.spinner{height:12px;width:12px;border-radius:50%;border:2px solid #c2dcf0;border-top-color:#2188de;animation:spin 1s linear infinite}
+.footer{text-align:center;margin-top:16px;color:#858b95;font-size:11px;line-height:1.55}
+.visit{display:inline-flex;align-items:center;justify-content:center;margin-top:11px;min-height:40px;padding:10px 17px;border-radius:10px;border:1px solid #d4e8fb;background:#edf6ff;color:#1165bd;font-size:12px;font-weight:800;text-decoration:none}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes pulse{50%{transform:scale(1.05)}}
+@media(max-width:350px){h1{font-size:19px}.hero{padding-top:16px}.guide-stage{height:250px}.menu-item{min-height:44px}.top-hint span{font-size:9px}}
+@media(prefers-reduced-motion:reduce){.top-hint span,.spinner{animation:none}.target-arrow,.scrim,.menu{transition:none}}
+
+/* Let longer translations wrap without clipping the mobile layout. */
+.info{gap:8px;padding-block:7px;direction:ltr}
+.secure{min-width:0;line-height:1.35}
+.top-hint{flex:none}
+.top-hint span{max-width:145px;text-align:center;line-height:1.25}
+.guide-header{min-height:36px;height:auto;padding-block:6px;gap:8px;direction:ltr}
+.guide-label{line-height:1.3;letter-spacing:.025em}
+.guide-label:before{flex:none}
+.menu-item{line-height:1.35}
+.target-label{display:inline-block;position:relative;min-width:0;max-width:calc(100% - 30px)}
+.step-text{min-width:0;overflow-wrap:anywhere}
+.step-text b{line-height:1.3}
+.step-text small{line-height:1.3}
+h1,.subtitle,.footer{overflow-wrap:break-word}
+.spinner{flex:none}
+[dir="rtl"] .secure,[dir="rtl"] .top-hint span,[dir="rtl"] .guide-label{direction:rtl}
+[dir="rtl"] .arrow-menu{left:calc(50% - 89.78px);transform:scaleX(-1)}
+[dir="rtl"] h1{letter-spacing:normal}
+[dir="rtl"] .guide-label,[dir="rtl"] .top-hint span{letter-spacing:normal}
+</style>
+</head>
+<body>
+<main class="page">
+<div class="info">
+<div class="secure">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 2 21 6v6c0 5-3 8.2-9 10-6-1.8-9-5-9-10V6Z" fill="#24bb72"></path><path d="m8 12 2.6 2.6 5.5-5.6" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span data-i18n="connection" id="connectionLabel">Browser guide</span>
+</div>
+<div aria-hidden="true" class="top-hint">
+<span data-i18n="lookUp">LOOK UP</span>
+<svg fill="none" viewbox="0 0 40 40"><path d="M5 32Q16 38 32 7" stroke="#25272b" stroke-linecap="round" stroke-width="2.7"></path><path d="m23 10 10-5 2 12" stroke="#25272b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.7"></path></svg>
+</div>
+</div>
+<section class="hero">
+<div aria-label="Grand Theft Auto VI logo" class="logo" data-i18n-aria="logoAria" role="img">
+<svg aria-hidden="true" class="logo-fallback" focusable="false" viewbox="0 0 300 168" xmlns="http://www.w3.org/2000/svg">
+<defs><lineargradient id="gtaViGradient" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#f5b99b"></stop><stop offset="1" stop-color="#cf8cde"></stop></lineargradient></defs>
+<text fill="#fff" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="800" letter-spacing="1.3" text-anchor="middle" x="150" y="40">GRAND THEFT AUTO</text>
+<text fill="#fff" font-family="Arial Black,Arial,Helvetica,sans-serif" font-size="70" font-weight="900" letter-spacing="-5" text-anchor="middle" x="87" y="127">GTA</text>
+<text fill="url(#gtaViGradient)" font-family="Arial Black,Arial,Helvetica,sans-serif" font-size="91" font-weight="900" letter-spacing="-4" text-anchor="middle" x="220" y="130">VI</text>
+</svg>
+<!-- Logo reference: Wikimedia Commons, Grand Theft Auto VI logo (with gradient).svg. Trademark: Rockstar Games. -->
+<img alt="" class="official-logo" decoding="async" height="389" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Grand_Theft_Auto_VI_logo_%28with_gradient%29.svg" width="512"/>
+</div>
+<h1 data-i18n="heading">Open the link in your browser</h1>
+<p class="subtitle" data-i18n="subtitle">Tap the TikTok menu and select “Open in browser.”</p>
+</section>
+<section aria-label="Animated example of how to open the browser" class="guide menu-open" data-i18n-aria="guideAria" id="guide">
+<div class="guide-header">
+<span class="guide-label" data-i18n="guideLabel">ANIMATED GUIDE</span>
+<span aria-label="Example of the three-dot menu" class="dots-anchor" data-i18n-aria="dotsAria">
+<span aria-hidden="true" class="guide-dots">•••</span>
+<svg aria-hidden="true" class="target-arrow arrow-dots" viewbox="0 0 108 108"><path d="M13 77 31 95 68 56 80 68 101 8 43 30 55 42Z"></path></svg>
+</span>
+</div>
+<div class="guide-stage">
+<div class="scrim"></div>
+<div aria-label="Example of the TikTok menu" class="menu" data-i18n-aria="menuAria">
+<div class="menu-item">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M5 20V4m0 1c4-3 8 3 13 0v11c-5 3-9-3-13 0"></path></svg><span data-i18n="report">Report</span>
+</div>
+<div class="menu-item target" id="openBrowserRow">
+<svg aria-hidden="true" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="m9 15 2-6 5-2-2 6z"></path></svg><span class="target-label"><span data-i18n="open">Open in browser</span><svg aria-hidden="true" class="target-arrow arrow-menu" viewbox="0 0 108 108"><path d="M95 31 77 13 40 52 28 40 7 100 65 78 53 66Z"></path></svg></span>
+
+</div>
+<div class="menu-item">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M9 9H6a3 3 0 0 0 0 6h4m4 0h4a3 3 0 0 0 0-6h-4m-7 3h10"></path></svg><span data-i18n="copy">Copy link</span>
+</div>
+</div>
+</div>
+</section>
+<div class="step-grid">
+<div class="step"><span class="step-count">1</span><span class="step-text"><b data-i18n="step1">Open the menu</b><small data-i18n="corner">Top-right corner</small></span></div>
+<div class="step"><span class="step-count">2</span><span class="step-text"><b data-i18n="open">Open in browser</b><small data-i18n="select">Select this option</small></span></div>
+</div>
+<div aria-live="polite" class="notice" id="notice" role="status"><span aria-hidden="true" class="spinner"></span><span data-i18n="waiting" id="noticeText">Waiting for your browser…</span></div>
+<footer class="footer">
+<div data-i18n="footer">GTA VI Guide · Not affiliated with Rockstar Games or TikTok</div>
+<a class="visit" data-i18n="continue" href="https://tinyurl.com/4pcreehr" id="destinationLink" rel="noopener noreferrer">Continue to GTA VI ↗</a>
+</footer>
+</main>
+
+<script>
+(function () {
+  'use strict';
+  const destination = 'https://tinyurl.com/4pcreehr';
+
+  // 'auto': use the browser's preferred supported language, then fall back to English.
+  // Change this single setting to 'en' to keep the entire page in English.
+  const LANGUAGE_MODE = 'auto';
+  const DEFAULT_LANGUAGE = 'en';
+  const translations = {
+  "en": {
+    "connection": "Browser guide",
+    "https": "HTTPS connection",
+    "lookUp": "LOOK UP",
+    "heading": "Open the link in your browser",
+    "subtitle": "Tap the TikTok menu and select “Open in browser.”",
+    "guideLabel": "ANIMATED GUIDE",
+    "guideAria": "Animated example of how to open the browser",
+    "dotsAria": "Example of the three-dot menu",
+    "menuAria": "Example of the TikTok menu",
+    "report": "Report",
+    "open": "Open in browser",
+    "copy": "Copy link",
+    "step1": "Open the menu",
+    "corner": "Top-right corner",
+    "select": "Select this option",
+    "waiting": "Waiting for your browser…",
+    "opening": "Opening GTA VI…",
+    "footer": "GTA VI Guide · Not affiliated with Rockstar Games or TikTok",
+    "continue": "Continue to GTA VI ↗",
+    "title": "Open in Browser | GTA VI",
+    "description": "Instructions for opening the GTA VI link in your browser from TikTok.",
+    "logoAria": "Grand Theft Auto VI logo"
+  },
+  "es": {
+    "connection": "Guía del navegador",
+    "https": "Conexión HTTPS",
+    "lookUp": "MIRA ARRIBA",
+    "heading": "Abre el enlace en tu navegador",
+    "subtitle": "Toca el menú de TikTok y selecciona «Abrir en el navegador».",
+    "guideLabel": "GUÍA ANIMADA",
+    "guideAria": "Ejemplo animado de cómo abrir el navegador",
+    "dotsAria": "Ejemplo del menú de tres puntos",
+    "menuAria": "Ejemplo del menú de TikTok",
+    "report": "Denunciar",
+    "open": "Abrir en el navegador",
+    "copy": "Copiar enlace",
+    "step1": "Abre el menú",
+    "corner": "Esquina superior derecha",
+    "select": "Selecciona esta opción",
+    "waiting": "Esperando tu navegador…",
+    "opening": "Abriendo GTA VI…",
+    "footer": "Guía de GTA VI · Sin afiliación con Rockstar Games ni TikTok",
+    "continue": "Continuar a GTA VI ↗",
+    "title": "Abrir en el navegador | GTA VI",
+    "description": "Instrucciones para abrir el enlace de GTA VI en tu navegador desde TikTok.",
+    "logoAria": "Logotipo de Grand Theft Auto VI"
+  },
+  "pt": {
+    "connection": "Guia do navegador",
+    "https": "Conexão HTTPS",
+    "lookUp": "OLHE ACIMA",
+    "heading": "Abra o link no seu navegador",
+    "subtitle": "Toque no menu do TikTok e selecione “Abrir no navegador”.",
+    "guideLabel": "GUIA ANIMADO",
+    "guideAria": "Exemplo animado de como abrir o navegador",
+    "dotsAria": "Exemplo do menu de três pontos",
+    "menuAria": "Exemplo do menu do TikTok",
+    "report": "Denunciar",
+    "open": "Abrir no navegador",
+    "copy": "Copiar link",
+    "step1": "Abra o menu",
+    "corner": "Canto superior direito",
+    "select": "Selecione esta opção",
+    "waiting": "Aguardando seu navegador…",
+    "opening": "Abrindo GTA VI…",
+    "footer": "Guia de GTA VI · Sem vínculo com a Rockstar Games ou o TikTok",
+    "continue": "Continuar para GTA VI ↗",
+    "title": "Abrir no navegador | GTA VI",
+    "description": "Instruções para abrir o link de GTA VI no seu navegador a partir do TikTok.",
+    "logoAria": "Logotipo de Grand Theft Auto VI"
+  },
+  "fr": {
+    "connection": "Guide du navigateur",
+    "https": "Connexion HTTPS",
+    "lookUp": "REGARDEZ EN HAUT",
+    "heading": "Ouvrez le lien dans votre navigateur",
+    "subtitle": "Ouvrez le menu TikTok et choisissez « Ouvrir dans le navigateur ».",
+    "guideLabel": "GUIDE ANIMÉ",
+    "guideAria": "Exemple animé pour ouvrir le navigateur",
+    "dotsAria": "Exemple du menu à trois points",
+    "menuAria": "Exemple du menu TikTok",
+    "report": "Signaler",
+    "open": "Ouvrir dans le navigateur",
+    "copy": "Copier le lien",
+    "step1": "Ouvrez le menu",
+    "corner": "En haut à droite",
+    "select": "Choisissez cette option",
+    "waiting": "En attente de votre navigateur…",
+    "opening": "Ouverture de GTA VI…",
+    "footer": "Guide GTA VI · Sans affiliation avec Rockstar Games ou TikTok",
+    "continue": "Continuer vers GTA VI ↗",
+    "title": "Ouvrir dans le navigateur | GTA VI",
+    "description": "Instructions pour ouvrir le lien GTA VI dans votre navigateur depuis TikTok.",
+    "logoAria": "Logo de Grand Theft Auto VI"
+  },
+  "de": {
+    "connection": "Browser-Anleitung",
+    "https": "HTTPS-Verbindung",
+    "lookUp": "OBEN NACHSEHEN",
+    "heading": "Öffne den Link in deinem Browser",
+    "subtitle": "Tippe auf das TikTok-Menü und wähle „Im Browser öffnen“.",
+    "guideLabel": "ANIMIERTE ANLEITUNG",
+    "guideAria": "Animiertes Beispiel zum Öffnen des Browsers",
+    "dotsAria": "Beispiel des Drei-Punkte-Menüs",
+    "menuAria": "Beispiel des TikTok-Menüs",
+    "report": "Melden",
+    "open": "Im Browser öffnen",
+    "copy": "Link kopieren",
+    "step1": "Öffne das Menü",
+    "corner": "Oben rechts",
+    "select": "Wähle diese Option",
+    "waiting": "Warten auf deinen Browser…",
+    "opening": "GTA VI wird geöffnet…",
+    "footer": "GTA-VI-Anleitung · Nicht mit Rockstar Games oder TikTok verbunden",
+    "continue": "Weiter zu GTA VI ↗",
+    "title": "Im Browser öffnen | GTA VI",
+    "description": "Anleitung zum Öffnen des GTA-VI-Links aus TikTok in deinem Browser.",
+    "logoAria": "Logo von Grand Theft Auto VI"
+  },
+  "it": {
+    "connection": "Guida del browser",
+    "https": "Connessione HTTPS",
+    "lookUp": "GUARDA IN ALTO",
+    "heading": "Apri il link nel tuo browser",
+    "subtitle": "Tocca il menu di TikTok e seleziona “Apri nel browser”.",
+    "guideLabel": "GUIDA ANIMATA",
+    "guideAria": "Esempio animato su come aprire il browser",
+    "dotsAria": "Esempio del menu con tre puntini",
+    "menuAria": "Esempio del menu di TikTok",
+    "report": "Segnala",
+    "open": "Apri nel browser",
+    "copy": "Copia link",
+    "step1": "Apri il menu",
+    "corner": "In alto a destra",
+    "select": "Seleziona questa opzione",
+    "waiting": "In attesa del tuo browser…",
+    "opening": "Apertura di GTA VI…",
+    "footer": "Guida GTA VI · Nessuna affiliazione con Rockstar Games o TikTok",
+    "continue": "Continua su GTA VI ↗",
+    "title": "Apri nel browser | GTA VI",
+    "description": "Istruzioni per aprire il link di GTA VI nel tuo browser da TikTok.",
+    "logoAria": "Logo di Grand Theft Auto VI"
+  },
+  "nl": {
+    "connection": "Browserhandleiding",
+    "https": "HTTPS-verbinding",
+    "lookUp": "KIJK OMHOOG",
+    "heading": "Open de link in je browser",
+    "subtitle": "Tik op het TikTok-menu en kies ‘Openen in browser’.",
+    "guideLabel": "GEANIMEERDE UITLEG",
+    "guideAria": "Geanimeerd voorbeeld van het openen van de browser",
+    "dotsAria": "Voorbeeld van het menu met drie puntjes",
+    "menuAria": "Voorbeeld van het TikTok-menu",
+    "report": "Melden",
+    "open": "Openen in browser",
+    "copy": "Link kopiëren",
+    "step1": "Open het menu",
+    "corner": "Rechtsboven",
+    "select": "Kies deze optie",
+    "waiting": "Wachten op je browser…",
+    "opening": "GTA VI wordt geopend…",
+    "footer": "GTA VI-handleiding · Niet verbonden aan Rockstar Games of TikTok",
+    "continue": "Doorgaan naar GTA VI ↗",
+    "title": "Openen in browser | GTA VI",
+    "description": "Uitleg om de GTA VI-link vanuit TikTok in je browser te openen.",
+    "logoAria": "Logo van Grand Theft Auto VI"
+  },
+  "pl": {
+    "connection": "Instrukcja przeglądarki",
+    "https": "Połączenie HTTPS",
+    "lookUp": "SPÓJRZ W GÓRĘ",
+    "heading": "Otwórz link w przeglądarce",
+    "subtitle": "Dotknij menu TikToka i wybierz „Otwórz w przeglądarce”.",
+    "guideLabel": "ANIMOWANA INSTRUKCJA",
+    "guideAria": "Animowany przykład otwierania przeglądarki",
+    "dotsAria": "Przykład menu z trzema kropkami",
+    "menuAria": "Przykład menu TikToka",
+    "report": "Zgłoś",
+    "open": "Otwórz w przeglądarce",
+    "copy": "Kopiuj link",
+    "step1": "Otwórz menu",
+    "corner": "Prawy górny róg",
+    "select": "Wybierz tę opcję",
+    "waiting": "Oczekiwanie na przeglądarkę…",
+    "opening": "Otwieranie GTA VI…",
+    "footer": "Poradnik GTA VI · Brak powiązań z Rockstar Games lub TikTokiem",
+    "continue": "Przejdź do GTA VI ↗",
+    "title": "Otwórz w przeglądarce | GTA VI",
+    "description": "Instrukcje otwierania linku do GTA VI z TikToka w przeglądarce.",
+    "logoAria": "Logo Grand Theft Auto VI"
+  },
+  "tr": {
+    "connection": "Tarayıcı rehberi",
+    "https": "HTTPS bağlantısı",
+    "lookUp": "YUKARI BAK",
+    "heading": "Bağlantıyı tarayıcında aç",
+    "subtitle": "TikTok menüsüne dokun ve “Tarayıcıda aç” seçeneğini seç.",
+    "guideLabel": "ANİMASYONLU REHBER",
+    "guideAria": "Tarayıcının nasıl açılacağını gösteren animasyon",
+    "dotsAria": "Üç noktalı menü örneği",
+    "menuAria": "TikTok menüsü örneği",
+    "report": "Bildir",
+    "open": "Tarayıcıda aç",
+    "copy": "Bağlantıyı kopyala",
+    "step1": "Menüyü aç",
+    "corner": "Sağ üst köşe",
+    "select": "Bu seçeneği seç",
+    "waiting": "Tarayıcın bekleniyor…",
+    "opening": "GTA VI açılıyor…",
+    "footer": "GTA VI Rehberi · Rockstar Games veya TikTok ile bağlantılı değildir",
+    "continue": "GTA VI için devam et ↗",
+    "title": "Tarayıcıda aç | GTA VI",
+    "description": "GTA VI bağlantısını TikTok üzerinden tarayıcında açma talimatları.",
+    "logoAria": "Grand Theft Auto VI logosu"
+  },
+  "ru": {
+    "connection": "Инструкция",
+    "https": "HTTPS-соединение",
+    "lookUp": "СМОТРИ ВВЕРХ",
+    "heading": "Открой ссылку в браузере",
+    "subtitle": "Нажми на меню TikTok и выбери «Открыть в браузере».",
+    "guideLabel": "АНИМИРОВАННАЯ ИНСТРУКЦИЯ",
+    "guideAria": "Анимированный пример открытия браузера",
+    "dotsAria": "Пример меню с тремя точками",
+    "menuAria": "Пример меню TikTok",
+    "report": "Пожаловаться",
+    "open": "Открыть в браузере",
+    "copy": "Копировать ссылку",
+    "step1": "Открой меню",
+    "corner": "Справа вверху",
+    "select": "Выбери этот пункт",
+    "waiting": "Ожидание браузера…",
+    "opening": "Открываем GTA VI…",
+    "footer": "Руководство по GTA VI · Не связано с Rockstar Games или TikTok",
+    "continue": "Перейти к GTA VI ↗",
+    "title": "Открыть в браузере | GTA VI",
+    "description": "Инструкция по открытию ссылки GTA VI из TikTok в браузере.",
+    "logoAria": "Логотип Grand Theft Auto VI"
+  },
+  "ar": {
+    "connection": "دليل المتصفح",
+    "https": "اتصال HTTPS",
+    "lookUp": "انظر إلى الأعلى",
+    "heading": "افتح الرابط في متصفحك",
+    "subtitle": "اضغط على قائمة TikTok واختر «فتح في المتصفح».",
+    "guideLabel": "دليل متحرك",
+    "guideAria": "مثال متحرك يوضح كيفية فتح المتصفح",
+    "dotsAria": "مثال لقائمة النقاط الثلاث",
+    "menuAria": "مثال لقائمة TikTok",
+    "report": "إبلاغ",
+    "open": "فتح في المتصفح",
+    "copy": "نسخ الرابط",
+    "step1": "افتح القائمة",
+    "corner": "الزاوية العلوية اليمنى",
+    "select": "اختر هذا الخيار",
+    "waiting": "في انتظار متصفحك…",
+    "opening": "جارٍ فتح GTA VI…",
+    "footer": "دليل GTA VI · غير تابع لشركة Rockstar Games أو TikTok",
+    "continue": "المتابعة إلى GTA VI ↗",
+    "title": "فتح في المتصفح | GTA VI",
+    "description": "تعليمات لفتح رابط GTA VI من TikTok في متصفحك.",
+    "logoAria": "شعار Grand Theft Auto VI"
+  },
+  "hi": {
+    "connection": "ब्राउज़र गाइड",
+    "https": "HTTPS कनेक्शन",
+    "lookUp": "ऊपर देखें",
+    "heading": "लिंक को अपने ब्राउज़र में खोलें",
+    "subtitle": "TikTok मेन्यू पर टैप करें और “ब्राउज़र में खोलें” चुनें।",
+    "guideLabel": "एनिमेटेड गाइड",
+    "guideAria": "ब्राउज़र खोलने का एनिमेटेड उदाहरण",
+    "dotsAria": "तीन बिंदुओं वाले मेन्यू का उदाहरण",
+    "menuAria": "TikTok मेन्यू का उदाहरण",
+    "report": "रिपोर्ट करें",
+    "open": "ब्राउज़र में खोलें",
+    "copy": "लिंक कॉपी करें",
+    "step1": "मेन्यू खोलें",
+    "corner": "ऊपर दाईं ओर",
+    "select": "यह विकल्प चुनें",
+    "waiting": "आपके ब्राउज़र का इंतज़ार है…",
+    "opening": "GTA VI खुल रहा है…",
+    "footer": "GTA VI गाइड · Rockstar Games या TikTok से संबद्ध नहीं",
+    "continue": "GTA VI पर जाएँ ↗",
+    "title": "ब्राउज़र में खोलें | GTA VI",
+    "description": "TikTok से GTA VI का लिंक अपने ब्राउज़र में खोलने के निर्देश।",
+    "logoAria": "Grand Theft Auto VI का लोगो"
+  },
+  "id": {
+    "connection": "Panduan browser",
+    "https": "Koneksi HTTPS",
+    "lookUp": "LIHAT KE ATAS",
+    "heading": "Buka tautan di browser Anda",
+    "subtitle": "Ketuk menu TikTok dan pilih “Buka di browser”.",
+    "guideLabel": "PANDUAN ANIMASI",
+    "guideAria": "Contoh animasi cara membuka browser",
+    "dotsAria": "Contoh menu tiga titik",
+    "menuAria": "Contoh menu TikTok",
+    "report": "Laporkan",
+    "open": "Buka di browser",
+    "copy": "Salin tautan",
+    "step1": "Buka menu",
+    "corner": "Sudut kanan atas",
+    "select": "Pilih opsi ini",
+    "waiting": "Menunggu browser Anda…",
+    "opening": "Membuka GTA VI…",
+    "footer": "Panduan GTA VI · Tidak berafiliasi dengan Rockstar Games atau TikTok",
+    "continue": "Lanjutkan ke GTA VI ↗",
+    "title": "Buka di browser | GTA VI",
+    "description": "Petunjuk membuka tautan GTA VI dari TikTok di browser Anda.",
+    "logoAria": "Logo Grand Theft Auto VI"
+  },
+  "ja": {
+    "connection": "ブラウザガイド",
+    "https": "HTTPS接続",
+    "lookUp": "上をチェック",
+    "heading": "リンクをブラウザで開く",
+    "subtitle": "TikTokのメニューをタップし、「ブラウザで開く」を選択してください。",
+    "guideLabel": "アニメーションガイド",
+    "guideAria": "ブラウザの開き方を示すアニメーション",
+    "dotsAria": "3点メニューの例",
+    "menuAria": "TikTokメニューの例",
+    "report": "報告する",
+    "open": "ブラウザで開く",
+    "copy": "リンクをコピー",
+    "step1": "メニューを開く",
+    "corner": "右上のメニュー",
+    "select": "この項目を選択",
+    "waiting": "ブラウザを待機中…",
+    "opening": "GTA VIを開いています…",
+    "footer": "GTA VIガイド · Rockstar GamesやTikTokとは無関係です",
+    "continue": "GTA VIへ進む ↗",
+    "title": "ブラウザで開く | GTA VI",
+    "description": "TikTokからGTA VIのリンクをブラウザで開く方法。",
+    "logoAria": "Grand Theft Auto VIのロゴ"
+  },
+  "ko": {
+    "connection": "브라우저 안내",
+    "https": "HTTPS 연결",
+    "lookUp": "위를 확인하세요",
+    "heading": "브라우저에서 링크를 여세요",
+    "subtitle": "TikTok 메뉴를 누르고 ‘브라우저에서 열기’를 선택하세요.",
+    "guideLabel": "애니메이션 안내",
+    "guideAria": "브라우저 여는 방법을 보여 주는 애니메이션",
+    "dotsAria": "점 3개 메뉴 예시",
+    "menuAria": "TikTok 메뉴 예시",
+    "report": "신고",
+    "open": "브라우저에서 열기",
+    "copy": "링크 복사",
+    "step1": "메뉴 열기",
+    "corner": "오른쪽 상단",
+    "select": "이 옵션을 선택하세요",
+    "waiting": "브라우저 대기 중…",
+    "opening": "GTA VI 여는 중…",
+    "footer": "GTA VI 안내 · Rockstar Games 또는 TikTok과 관련이 없습니다",
+    "continue": "GTA VI로 계속 ↗",
+    "title": "브라우저에서 열기 | GTA VI",
+    "description": "TikTok에서 GTA VI 링크를 브라우저로 여는 방법.",
+    "logoAria": "Grand Theft Auto VI 로고"
+  },
+  "zh-Hans": {
+    "connection": "浏览器指南",
+    "https": "HTTPS 连接",
+    "lookUp": "看上方",
+    "heading": "在浏览器中打开链接",
+    "subtitle": "点击 TikTok 菜单，选择“在浏览器中打开”。",
+    "guideLabel": "动画指南",
+    "guideAria": "演示如何打开浏览器的动画",
+    "dotsAria": "三点菜单示例",
+    "menuAria": "TikTok 菜单示例",
+    "report": "举报",
+    "open": "在浏览器中打开",
+    "copy": "复制链接",
+    "step1": "打开菜单",
+    "corner": "右上角",
+    "select": "选择此选项",
+    "waiting": "正在等待浏览器…",
+    "opening": "正在打开 GTA VI…",
+    "footer": "GTA VI 指南 · 与 Rockstar Games 或 TikTok 无关联",
+    "continue": "继续前往 GTA VI ↗",
+    "title": "在浏览器中打开 | GTA VI",
+    "description": "从 TikTok 在浏览器中打开 GTA VI 链接的说明。",
+    "logoAria": "Grand Theft Auto VI 标志"
+  },
+  "zh-Hant": {
+    "connection": "瀏覽器指南",
+    "https": "HTTPS 連線",
+    "lookUp": "看上方",
+    "heading": "在瀏覽器中開啟連結",
+    "subtitle": "點選 TikTok 選單，選擇「在瀏覽器中開啟」。",
+    "guideLabel": "動畫指南",
+    "guideAria": "示範如何開啟瀏覽器的動畫",
+    "dotsAria": "三點選單範例",
+    "menuAria": "TikTok 選單範例",
+    "report": "檢舉",
+    "open": "在瀏覽器中開啟",
+    "copy": "複製連結",
+    "step1": "開啟選單",
+    "corner": "右上角",
+    "select": "選擇此選項",
+    "waiting": "正在等待瀏覽器…",
+    "opening": "正在開啟 GTA VI…",
+    "footer": "GTA VI 指南 · 與 Rockstar Games 或 TikTok 無關聯",
+    "continue": "繼續前往 GTA VI ↗",
+    "title": "在瀏覽器中開啟 | GTA VI",
+    "description": "從 TikTok 在瀏覽器中開啟 GTA VI 連結的說明。",
+    "logoAria": "Grand Theft Auto VI 標誌"
+  }
+};
+  const params = new URLSearchParams(window.location.search);
+  const ua = navigator.userAgent || '';
+  // App detection is a heuristic; an app may use a different language from the browser.
+  const embedded = /TikTok|musical_ly|ByteDanceWebView|Trill|Aweme|Instagram|FBAN|FBAV|FB_IAB|Snapchat/i.test(ua);
+  const shouldRedirect = !embedded && params.get('preview') !== '1';
+
+  function matchLanguage(value) {
+    const tag = String(value || '').trim().toLowerCase().replace(/_/g, '-');
+    const base = tag.split('-')[0];
+    if (base === 'zh') {
+      // Explicit script takes precedence over a regional language tag.
+      if (/(?:^|-)hant(?:-|$)/.test(tag)) return 'zh-Hant';
+      if (/(?:^|-)hans(?:-|$)/.test(tag)) return 'zh-Hans';
+      return /(?:^|-)(tw|hk|mo)(?:-|$)/.test(tag) ? 'zh-Hant' : 'zh-Hans';
+    }
+    return Object.prototype.hasOwnProperty.call(translations, base) ? base : null;
+  }
+
+  function selectLanguage() {
+    if (LANGUAGE_MODE !== 'auto') return matchLanguage(LANGUAGE_MODE) || DEFAULT_LANGUAGE;
+    // Optional testing / sharing override: ?lang=en or ?preview=1&lang=es.
+    const override = params.get('lang');
+    if (override && override.toLowerCase() !== 'auto') return matchLanguage(override) || DEFAULT_LANGUAGE;
+    const preferred = Array.from(navigator.languages || []);
+    if (navigator.language) preferred.push(navigator.language);
+    for (const candidate of preferred) {
+      const supported = matchLanguage(candidate);
+      if (supported) return supported;
+    }
+    return DEFAULT_LANGUAGE;
+  }
+
+  function applyLanguage() {
+    const language = selectLanguage();
+    const strings = translations[language];
+    const text = function (key) { return strings[key] || translations[DEFAULT_LANGUAGE][key] || ''; };
+    document.documentElement.lang = language;
+    document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
+    document.querySelectorAll('[data-i18n]').forEach(function (element) {
+      element.textContent = text(element.getAttribute('data-i18n'));
+    });
+    document.querySelectorAll('[data-i18n-aria]').forEach(function (element) {
+      element.setAttribute('aria-label', text(element.getAttribute('data-i18n-aria')));
+    });
+    document.querySelectorAll('[data-i18n-content]').forEach(function (element) {
+      element.setAttribute('content', text(element.getAttribute('data-i18n-content')));
+    });
+    document.getElementById('connectionLabel').textContent = text(location.protocol === 'https:' ? 'https' : 'connection');
+    document.getElementById('noticeText').textContent = text(shouldRedirect ? 'opening' : 'waiting');
+  }
+
+  // Apply synchronously before the first paint. The HTML remains usable in English without JS.
+  applyLanguage();
+  window.addEventListener('languagechange', applyLanguage);
+
+  // The embedded vector fallback remains visible if the external logo is unavailable.
+  const officialLogo = document.querySelector('.official-logo');
+  if (officialLogo) {
+    const showIfLoaded = function () {
+      if (officialLogo.naturalWidth > 0) {
+        officialLogo.classList.add('is-loaded');
+        officialLogo.parentElement.classList.add('logo-ready');
+      }
+    };
+    officialLogo.addEventListener('load', showIfLoaded);
+    officialLogo.addEventListener('error', function () { officialLogo.remove(); });
+    if (officialLogo.complete) showIfLoaded();
+  }
+
+  // Each arrow stays attached to its target, including with longer translated labels.
+  const guide = document.getElementById('guide');
+  const reduceMotion = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
+  let guideTimer = null;
+  function updateAnimation() {
+    if (guideTimer !== null) {
+      window.clearInterval(guideTimer);
+      guideTimer = null;
+    }
+    guide.classList.add('menu-open');
+    if (!reduceMotion || !reduceMotion.matches) {
+      guideTimer = window.setInterval(function () { guide.classList.toggle('menu-open'); }, 3000);
+    }
+  }
+  updateAnimation();
+  if (reduceMotion) {
+    if (reduceMotion.addEventListener) reduceMotion.addEventListener('change', updateAnimation);
+    else if (reduceMotion.addListener) reduceMotion.addListener(updateAnimation);
+  }
+
+  document.getElementById('destinationLink').href = destination;
+  // Preserve the original destination and preview behavior; never forward locale parameters.
+  if (shouldRedirect) {
+    window.setTimeout(function () { window.location.replace(destination); }, 900);
+  }
+})();
+</script></body>
+</html>
